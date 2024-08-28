@@ -1,0 +1,115 @@
+/* Header Styling */
+.header {
+    background: linear-gradient(to right, #1d2b64, #f8cdda);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    overflow: hidden;
+}
+.header h1 {
+    font-size: 3em;
+    letter-spacing: 2px;
+    animation: slideIn 2s ease-out forwards;
+}
+
+/* Container and Compound Styling */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.compound {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 45%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.compound:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.compound::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: 0.7s ease;
+}
+
+.compound:hover::before {
+    left: -50%;
+}
+
+h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Organic and Inorganic Compound Backgrounds */
+.organic {
+    background: linear-gradient(145deg, #e8f5e9, #c8e6c9);
+}
+
+.inorganic {
+    background: linear-gradient(145deg, #e1f5fe, #b3e5fc);
+}
+
+/* Separator Styling */
+.separator {
+    width: 80%;
+    height: 4px;
+    background: linear-gradient(to right, #1d2b64, #f8cdda);
+    margin: 40px auto;
+    border-radius: 2px;
+}
+
+/* Animations */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .compound {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}

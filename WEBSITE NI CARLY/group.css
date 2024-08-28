@@ -1,0 +1,11 @@
+.group {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #20232980;
+    border: 0.25rem solid var(--base-color);
+    border-radius: 1rem;
+}
+
+.group img {
+    width: 35rem;
+}

@@ -1,0 +1,9 @@
+.cotainer{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 50px;
+    max-width: 500px;
+    border: 2px solid black;
+}
